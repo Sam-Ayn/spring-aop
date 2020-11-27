@@ -10,7 +10,7 @@ public class MainDemoApp {
                 new AnnotationConfigApplicationContext(DemoConfig.class);
         AccountDAO accountDAO = context.getBean("accountDAO", AccountDAO.class);
         MembershipDAO membershipDAO = context.getBean("membershipDAO", MembershipDAO.class);
-        accountDAO.addAccount(new Account(), false);
+        accountDAO.addAccount(new Account("My Account", "Gold"), false);
         accountDAO.doWork();
         accountDAO.setName("DAO name");
         accountDAO.setServiceCode("code 1");
