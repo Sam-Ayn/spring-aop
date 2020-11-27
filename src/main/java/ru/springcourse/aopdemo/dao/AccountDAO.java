@@ -3,6 +3,9 @@ package ru.springcourse.aopdemo.dao;
 import org.springframework.stereotype.Component;
 import ru.springcourse.aopdemo.Account;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Component
 public class AccountDAO {
 
@@ -38,5 +41,12 @@ public class AccountDAO {
         return true;
     }
 
+    public List<Account> findAccounts(){
+        List<Account> accounts =  new ArrayList<>();
+        accounts.add(new Account("John", "Silver"));
+        accounts.add(new Account("Michael", "Platinum"));
+        accounts.add(new Account("Lucas", "Gold"));
+        return accounts;
+    }
 
 }
