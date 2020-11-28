@@ -49,4 +49,11 @@ public class AccountDAO {
         return accounts;
     }
 
+    public List<Account> findAccounts(boolean tripWire){
+        if (tripWire){
+            throw new RuntimeException("After throwing simulation");
+        }
+        return findAccounts();
+    }
+
 }
